@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.sfondo {
+    position: relative;
+}
+
+.sfondo-blu {
+    height: 15vh;
+    background-color: #009688;
+}
+
+.sfondo-chiaro {
+    height: 85vh;
+    background-color: #DADBD3;
+}
+
+main {
+    position: absolute;
+    background-color: red;
+    height: 500px;
+}
