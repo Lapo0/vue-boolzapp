@@ -89,16 +89,22 @@ main {
     overflow-y: scroll;
 }
 
+.bg-whatsapp .row > .col-auto {
+    max-width: 50%;
+}
+
 .input-message i {
     color: #6B7376;
 }
 
-.align-self-end {
+.send {
     background-color: #D5F9BA;
     border-radius: 10px;
+    align-self: end;
 }
 
-.align-self-start {
+.recived {
     background-color: white;
     border-radius: 10px;
+    align-self: start;
 }

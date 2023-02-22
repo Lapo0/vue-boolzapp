@@ -170,9 +170,16 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-        contacts: contacts
-
-    }
-},
+        contacts: contacts,
+        currentIndex: 0,
+        selectedContact: []
+        }
+    },
+    methods: {
+        selectContact(indexContact) {
+            this.selectedContact = this.contacts[indexContact]
+        },
+        
+    },
 
 }).mount('#app')

@@ -67,8 +67,9 @@
                                         </div>
                                         <div class="col bg-light side-contacts">
                                             <div 
-                                            v-for="contact in contacts"
+                                            v-for="(contact, i) in contacts"
                                             class="col py-2 contact"
+                                            @click="selectContact(i)"
                                             >
                                                 <div class="avatar d-flex align-items-center gap-1">
                                                     <div class="img-avatar bg-light rounded-circle overflow-hidden">
@@ -97,12 +98,14 @@
                                     <div class="row flex-column h-100">
                                         <div class="bg-gray py-2 border-start">
                                             <div class="my-avatar d-flex justify-content-between align-items-center">
-                                                <div class="avatar d-flex align-items-center gap-1">
+                                                <div class="avatar d-flex align-items-center gap-1"
+                                                v-if="selectedContact"
+                                                >
                                                     <div class="img-avatar bg-light rounded-circle overflow-hidden">
-                                                        <img src="./img/avatar.png" alt="">
+                                                        <img :src="selectedContact.avatar" alt="">
                                                     </div>
                                                     <p class="m-0">
-                                                        Lapo
+                                                        {{selectedContact.name}}
                                                     </p>
                                                 </div>
                                                 <div class="avatar-icon d-flex gap-3">
@@ -112,16 +115,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="bg-whatsapp flex-grow-1 p-5">
+                                        <div class="bg-whatsapp flex-grow-1 p-5"
+                                        v-if="selectedContact"
+                                        >
                                             <div class="row flex-column">
-                                                <div class="col-4 py-2 my-2 align-self-end">
-                                                    ciao
-                                                </div>
-                                                <div class="col-4 py-2 my-2 align-self-end">
-                                                    ciao
-                                                </div>
-                                                <div class="col-4 py-2 align-self-start">
-                                                    ciao bianco
+                                                <div class="col-auto py-2 my-2"
+                                                v-for="message in selectedContact.messages"
+                                                :class="message.status === 'received' ? 'recived' : 'send'"
+                                                >
+                                                    <p>
+                                                        {{message.message}}
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
