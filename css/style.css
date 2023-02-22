@@ -84,11 +84,21 @@ main {
 }
 
 .bg-whatsapp {
-    background-image: url(https://i.pinimg.com/236x/76/d0/cb/76d0cb78c24fcd2447da14470e935c80.jpg);
+    background-image: url(https://www.itechmania.it/wp-content/uploads/2015/11/wp_132.jpg);
     background-size: contain;
     overflow-y: scroll;
 }
 
 .input-message i {
     color: #6B7376;
+}
+
+.align-self-end {
+    background-color: #D5F9BA;
+    border-radius: 10px;
+}
+
+.align-self-start {
+    background-color: white;
+    border-radius: 10px;
 }
