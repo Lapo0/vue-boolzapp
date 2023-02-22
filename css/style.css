@@ -4,6 +4,16 @@
     margin: 0;
 }
 
+img {
+    max-width: 100%;
+}
+
+.img-avatar,
+.img-icon {
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+
 .sfondo {
     position: relative;
 }
@@ -25,4 +35,39 @@ main {
     transform: translate(-50%, -50%);
     background-color: red;
     width: 80%;
+}
+
+.avatar-icon {
+    color: #B1B1B1;
+}
+
+.img-icon i{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #8EDAFC;
+}
+
+.bg-celest {
+    background-color: #8EDAFC;
+}
+
+.notifiche .text :first-child {
+    font-weight: bold;
+    font-size: 12px;
+}
+.notifiche .text :last-child {
+    font-size: 10px;
+}
+
+.input-group-text {
+    border: 2px solid #ced4da;
+    border-right: none;
+}
+
+.form-control {
+    border: 2px solid #ced4da;
+    border-left: none;
+    border-bottom: none;
 }
