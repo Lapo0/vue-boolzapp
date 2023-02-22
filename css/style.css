@@ -33,7 +33,6 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: red;
     width: 80%;
 }
 
@@ -47,6 +46,10 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #8EDAFC;
+}
+
+.bg-gray {
+    background-color: #EAEAEA;
 }
 
 .bg-celest {
@@ -69,5 +72,8 @@ main {
 .form-control {
     border: 2px solid #ced4da;
     border-left: none;
-    border-bottom: none;
+}
+
+.contact :hover {
+    background-color: #EAEAEA;
 }
