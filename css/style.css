@@ -60,7 +60,7 @@ main {
     font-weight: bold;
     font-size: 12px;
 }
-.notifiche .text :last-child {
+.text :last-child {
     font-size: 10px;
 }
 
@@ -76,4 +76,9 @@ main {
 
 .contact :hover {
     background-color: #EAEAEA;
+}
+
+.side-contacts {
+    max-height: 500px;
+    overflow-y: scroll;
 }
