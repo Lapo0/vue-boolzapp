@@ -176,7 +176,7 @@ createApp({
         }
     },
     methods: {
-        selectContact(indexContact) {
+        currentContact(indexContact) {
             this.selectedContact = this.contacts[indexContact]
         },
         

@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 img {
@@ -97,14 +98,26 @@ main {
     color: #6B7376;
 }
 
-.send {
+.sent {
     background-color: #D5F9BA;
     border-radius: 10px;
     align-self: end;
 }
 
-.recived {
+.received {
     background-color: white;
     border-radius: 10px;
     align-self: start;
+}
+
+.last-access {
+    font-size: 10px;
+    color: #6B7376;
+}
+
+.time-mex {
+    bottom: 0;
+    right: 0;
+    font-size: 10px;
+    color: #6B7376;
 }
