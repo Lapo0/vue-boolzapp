@@ -172,22 +172,41 @@ createApp({
         selectedContact: [],
         myInputMessage: '',
         myMessage: '',
+        answer: '',
         }
     },
     methods: {
         currentContact(indexContact) {
             this.selectedContact = this.contacts[indexContact]
+            this.newContactSelected = true
         },
         inputMessage() {
+            // creazione del nuovo oggetto messaggio da pushare nell'array dell'utente selezionato
             this.myMessage = {
                 date: '10/01/2020 15:30:55',
                 message: this.myInputMessage,
                 status: 'sent'
             }
-
+            // aggiunta del messaggio scritto nell'input nella schermata
             this.selectedContact.messages.push(this.myMessage)
+            // reset dell'input
             this.myInputMessage = ''
+
+            this.newContactSelected = false
+
+            // Intervallo di tempo prima che l'utente risponda
+            setTimeout(() => {
+                if (!this.newContactSelected) {  // controllare se è stato selezionato un nuovo contatto dopo l'invio del messaggio
+                  this.answer = {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Non ho ben capito sai, potresti ripetere?',
+                    status: 'received',
+                  }
+                  this.selectedContact.messages.push(this.answer)
+                }
+              }, 3000)
         },
+
         
     },
 
