@@ -2,7 +2,7 @@
 const contacts = [
     {
     name: 'Michele',
-    avatar: './img/avatar.png',
+    avatar: './img/avatar_1.png',
     visible: true,
     messages: [
             {
@@ -24,7 +24,7 @@ const contacts = [
     },
     {
     name: 'Fabio',
-    avatar: './img/avatar.png',
+    avatar: './img/avatar_2.png',
     visible: true,
     messages: [
             {
@@ -46,7 +46,7 @@ const contacts = [
     },
     {
     name: 'Samuele',
-    avatar: './img/avatar.png',
+    avatar: './img/avatar_3.png',
     visible: true,
     messages: [
             {
@@ -68,7 +68,7 @@ const contacts = [
     },
     {
     name: 'Alessandro B.',
-    avatar: './img/avatar.png',
+    avatar: './img/avatar_4.png',
     visible: true,
     messages: [
             {
@@ -85,7 +85,7 @@ const contacts = [
     },
     {
     name: 'Alessandro L.',
-    avatar: './img/avatar.png',
+    avatar: './img/avatar_5.png',
     visible: true,
     messages: [
             {
@@ -102,7 +102,7 @@ const contacts = [
     },
     {
     name: 'Claudia',
-    avatar: './img/avatar.png',
+    avatar: './img/avatar_6.png',
     visible: true,
     messages: [
             {
@@ -124,7 +124,7 @@ const contacts = [
     },
     {
     name: 'Federico',
-    avatar: './img/avatar.png',
+    avatar: './img/avatar_7.png',
     visible: true,
     messages: [
             {
