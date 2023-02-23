@@ -163,21 +163,30 @@ const contacts = [
     }
 ]
 
-
-
 const { createApp } = Vue
 
 createApp({
     data() {
         return {
         contacts: contacts,
-        currentIndex: 0,
-        selectedContact: []
+        selectedContact: [],
+        myInputMessage: '',
+        myMessage: '',
         }
     },
     methods: {
         currentContact(indexContact) {
             this.selectedContact = this.contacts[indexContact]
+        },
+        inputMessage() {
+            this.myMessage = {
+                date: '10/01/2020 15:30:55',
+                message: this.myInputMessage,
+                status: 'sent'
+            }
+
+            this.selectedContact.messages.push(this.myMessage)
+            this.myInputMessage = ''
         },
         
     },

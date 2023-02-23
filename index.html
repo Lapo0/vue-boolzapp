@@ -111,7 +111,7 @@
                                                         <img :src="selectedContact.avatar" alt="">
                                                     </div>
                                                     <p class="m-0">
-                                                        {{selectedContact.name}}
+                                                        {{ selectedContact.name }}
                                                     </p>
                                                 </div>
                                                 <div class="avatar-icon d-flex gap-3">
@@ -125,10 +125,10 @@
                                             <div class="row flex-column">
                                                 <div class="col-auto my-1 p-0"
                                                 v-for="message in selectedContact.messages"
-                                                :class="message.status === 'sent' ? 'sent' : 'received'"
+                                                :class="message.status === 'sent' ? 'sent' : 'received'" 
                                                 >
                                                     <p class="mb-0 position-relative p-2 pe-4">
-                                                        {{message.message}}
+                                                        {{ message.message }}
                                                         <span class="position-absolute time-mex pe-1">
                                                             12:00
                                                         </span>
@@ -139,7 +139,11 @@
                                         <div class="input-message d-flex align-items-center justify-content-between gap-4 py-2 bg-gray">
                                             <i class="ps-3 fa-regular fa-face-smile"></i>
                                             <div class="w-100">
-                                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Scrivi un messaggio">
+                                                <input type="text" class="form-control" id="exampleFormControlInput1" 
+                                                placeholder="Scrivi un messaggio"
+                                                v-model="myInputMessage"
+                                                @keyup.enter="inputMessage"
+                                                >
                                             </div>
                                             <i class="pe-3 fa-solid fa-microphone"></i>
                                         </div>
@@ -152,9 +156,6 @@
                 </div>
             </main>
         </div>
-
-
-
     </div>
     
     <script src="./js/app.js"></script>
