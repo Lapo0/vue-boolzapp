@@ -175,11 +175,15 @@ createApp({
         myMessage: '',
         answer: '',
         inputContactSearch: '',
+        filteredContacts: [],
         }
     },
     methods: {
         currentContact(indexContact) {
+            // trovare il valore dell'indice del contatto attivo
             this.selectedContactIndex = indexContact
+
+            // selezionare tutto l'oggetto dell'array attivo
             this.selectedContact = this.contacts[indexContact]
             
             // definire che il contatto selezionato sia quello corrente
@@ -228,9 +232,10 @@ createApp({
 
                 // condizione per stabilire se iniziano ccon gli stessi caratteri
                 if (nameBig.startsWith(inputSearchBig)) {
-                    console.log(nameBig)
-                }
 
+                    this.filteredContacts.push(this.contacts[i])
+                    console.log(this.contacts[i])
+                }
             }
 
         },

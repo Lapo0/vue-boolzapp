@@ -15,26 +15,30 @@ img {
     aspect-ratio: 1/1;
 }
 
-.sfondo {
-    position: relative;
-}
-
 .sfondo-blu {
+    position: absolute;
+    width: 100%;
     height: 15vh;
     background-color: #009688;
+    z-index: -999;
 }
 
 .sfondo-chiaro {
+    position: absolute;
+    width: 100%;
+    margin-top: 15vh;
     height: 85vh;
     background-color: #DADBD3;
+    z-index: -999;
 }
 
 main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 80%;
+    margin: auto;
+}
+
+.whatsapp-main {
+    max-height: 500px;
 }
 
 .avatar-icon {
@@ -84,7 +88,6 @@ main {
 }
 
 .side-contacts {
-    max-height: 500px;
     overflow-y: scroll;
 }
 
