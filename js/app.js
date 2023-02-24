@@ -170,6 +170,7 @@ createApp({
         return {
         contacts: contacts,
         selectedContact: [],
+        selectedContactIndex: null,
         myInputMessage: '',
         myMessage: '',
         answer: '',
@@ -178,8 +179,9 @@ createApp({
     },
     methods: {
         currentContact(indexContact) {
+            this.selectedContactIndex = indexContact
             this.selectedContact = this.contacts[indexContact]
-
+            
             // definire che il contatto selezionato sia quello corrente
             this.newContactSelected = true
         },

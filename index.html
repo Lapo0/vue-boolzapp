@@ -76,6 +76,7 @@
                                             v-for="(contact, i) in contacts"
                                             class="col contact"
                                             @click="currentContact(i)"
+                                            :class="i === selectedContactIndex ? 'active' : ''"
                                             >
                                                 <div class="avatar d-flex align-items-center gap-1 p-2">
                                                     <div class="img-avatar bg-light rounded-circle overflow-hidden">
