@@ -22,9 +22,9 @@
             <div class="sfondo-chiaro">
             </div>
             <main>
-                <div class="container whatsapp-main py-5">
+                <div class="container whatsapp-main">
                     <div class="row">
-                        <div class="col-4 p-0">
+                        <div class="col-4 p-0 h-100">
                             <div class="contacts">
                                 <div class="container">
                                     <div class="row flex-column">
@@ -73,7 +73,7 @@
                                         </div>
                                         <div class="col bg-light side-contacts p-0">
                                             <div 
-                                            v-for="(contact, i) in contacts"
+                                            v-for="(contact, i) in filteredContacts"
                                             class="col contact"
                                             @click="currentContact(i)"
                                             :class="i === selectedContactIndex ? 'active' : ''"

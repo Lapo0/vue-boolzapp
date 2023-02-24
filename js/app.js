@@ -175,7 +175,7 @@ createApp({
         myMessage: '',
         answer: '',
         inputContactSearch: '',
-        filteredContacts: [],
+        filteredContacts: contacts,
         }
     },
     methods: {
@@ -188,6 +188,11 @@ createApp({
             
             // definire che il contatto selezionato sia quello corrente
             this.newContactSelected = true
+
+            // azzerare valore dell'input
+            this.inputContactSearch = ''
+
+            
         },
         inputMessage() {
             // creazione del nuovo oggetto messaggio da pushare nell'array dell'utente selezionato
@@ -226,6 +231,10 @@ createApp({
 
             // creare variabile per trasformare tutti i nomi in lettere maiuscole
             let nameBig = ''
+
+            this.filteredContacts = []
+            
+
             // creare ciclo per accedere a titti i contatti
             for (let i = 0; i < this.contacts.length; i++) {
                 nameBig = this.contacts[i].name.toUpperCase()
