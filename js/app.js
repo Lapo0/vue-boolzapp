@@ -1,7 +1,7 @@
 /// 
 const contacts = [
     {
-    name: 'Michele',
+    name: 'Giuseppe',
     avatar: './img/avatar_1.png',
     visible: true,
     messages: [
@@ -23,8 +23,8 @@ const contacts = [
         ],
     },
     {
-    name: 'Fabio',
-    avatar: './img/avatar_2.png',
+    name: 'Gianluca',
+    avatar: './img/avatar_5.png',
     visible: true,
     messages: [
             {
@@ -45,7 +45,7 @@ const contacts = [
         ],
     },
     {
-    name: 'Samuele',
+    name: 'Michele',
     avatar: './img/avatar_3.png',
     visible: true,
     messages: [
@@ -67,7 +67,7 @@ const contacts = [
         ],
     },
     {
-    name: 'Alessandro B.',
+    name: 'Giosuè',
     avatar: './img/avatar_4.png',
     visible: true,
     messages: [
@@ -84,8 +84,8 @@ const contacts = [
         ],
     },
     {
-    name: 'Alessandro L.',
-    avatar: './img/avatar_5.png',
+    name: 'Giuliana',
+    avatar: './img/avatar_2.png',
     visible: true,
     messages: [
             {
@@ -101,7 +101,7 @@ const contacts = [
         ],
     },
     {
-    name: 'Claudia',
+    name: 'Giorgio',
     avatar: './img/avatar_6.png',
     visible: true,
     messages: [
@@ -123,7 +123,7 @@ const contacts = [
         ],
     },
     {
-    name: 'Federico',
+    name: 'Gilberto',
     avatar: './img/avatar_7.png',
     visible: true,
     messages: [
@@ -140,7 +140,7 @@ const contacts = [
         ],
     },
     {
-    name: 'Davide',
+    name: 'Gilda',
     avatar: './img/avatar.png',
     visible: true,
     messages: [
@@ -173,11 +173,14 @@ createApp({
         myInputMessage: '',
         myMessage: '',
         answer: '',
+        inputContactSearch: '',
         }
     },
     methods: {
         currentContact(indexContact) {
             this.selectedContact = this.contacts[indexContact]
+
+            // definire che il contatto selezionato sia quello corrente
             this.newContactSelected = true
         },
         inputMessage() {
@@ -192,10 +195,12 @@ createApp({
             // reset dell'input
             this.myInputMessage = ''
 
+            // definire che il contatto selezionato sia diverso da quello corrente
             this.newContactSelected = false
 
             // Intervallo di tempo prima che l'utente risponda
             setTimeout(() => {
+                // se il contatto selezionato è diverso da false, quindi è lo stesso del messaggio inviato allora...
                 if (!this.newContactSelected) {  // controllare se è stato selezionato un nuovo contatto dopo l'invio del messaggio
                   this.answer = {
                     date: '10/01/2020 15:30:55',
@@ -204,10 +209,29 @@ createApp({
                   }
                   this.selectedContact.messages.push(this.answer)
                 }
-              }, 3000)
+              }, 1000)
         },
+        inputSearch() {
+            // trovare tutti i valori in base al click del carattere
+            console.log(this.inputContactSearch)
 
-        
+            // creare variabile per trasformare l'input in miauscolo
+            let inputSearchBig = this.inputContactSearch.toUpperCase()
+
+            // creare variabile per trasformare tutti i nomi in lettere maiuscole
+            let nameBig = ''
+            // creare ciclo per accedere a titti i contatti
+            for (let i = 0; i < this.contacts.length; i++) {
+                nameBig = this.contacts[i].name.toUpperCase()
+
+                // condizione per stabilire se iniziano ccon gli stessi caratteri
+                if (nameBig.startsWith(inputSearchBig)) {
+                    console.log(nameBig)
+                }
+
+            }
+
+        },
     },
 
 }).mount('#app')
