@@ -169,8 +169,8 @@ createApp({
     data() {
         return {
         contacts: contacts,
-        selectedContact: [],
-        selectedContactIndex: null,
+        selectedContact: [0],
+        selectedContactIndex: '',
         myInputMessage: '',
         myMessage: '',
         answer: '',
@@ -192,6 +192,7 @@ createApp({
             // azzerare valore dell'input
             this.inputContactSearch = ''
 
+            this.filteredContacts = this.contacts
             
         },
         inputMessage() {
@@ -233,7 +234,6 @@ createApp({
             let nameBig = ''
 
             this.filteredContacts = []
-            
 
             // creare ciclo per accedere a titti i contatti
             for (let i = 0; i < this.contacts.length; i++) {
